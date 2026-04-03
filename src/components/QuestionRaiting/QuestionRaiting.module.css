@@ -1,0 +1,21 @@
+.questionRate {
+    background-color: #F5F5F5;
+    padding: 5px 5px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 6px;
+    padding: 8px, 10px;
+}
+
+.raitingText {
+    font-size: 16px;
+}
+
+.raitingValue {
+    background-color: #7c3aed;
+    color: white;
+    padding: 1px 4px;
+    font-weight: 400;
+    border-radius: 3px;
+}

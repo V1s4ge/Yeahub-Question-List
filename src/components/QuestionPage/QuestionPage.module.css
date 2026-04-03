@@ -1,0 +1,16 @@
+.pageContainer {
+    display: flex;
+    justify-content: center;
+    padding: 0 112px;
+    gap: 20px; 
+    box-sizing: border-box;
+    margin-top: 40px;
+    align-items: flex-start;
+}
+
+@media (max-width: 1440px) {
+    .pageContainer {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}

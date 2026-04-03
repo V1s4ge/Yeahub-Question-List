@@ -1,0 +1,35 @@
+.paginationContainer {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+    justify-content: center;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.paginationContainer__button {
+    border: none;
+    background: none;
+    font-size: 12px;
+    color: black;
+}
+
+.arrowBtn {
+    border: 2px solid #d1d1d1;
+    background: none;
+    border-radius: 50%;
+}
+
+.arrowIcon {
+    width: 15px;
+    height: 14px;
+}
+
+.paginationContainer__button_active {
+    background-color: #7c3aed;
+    color: white;
+    padding: 4px;
+    font-weight: 400;
+    border-radius: 3px;
+
+}

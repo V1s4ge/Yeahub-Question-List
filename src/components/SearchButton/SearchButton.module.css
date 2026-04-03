@@ -1,0 +1,29 @@
+.button {
+  
+    padding: 12px;
+    background: white;
+    border: 1px solid #bababa;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center; 
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+
+.button:hover {
+    border-color: #7c3aed;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.1);
+}
+
+.active {
+    border-color: #7c3aed;
+}
+
+.skillIcon {
+    width: 15px;
+    height: 15px;
+}

@@ -1,0 +1,26 @@
+header {
+    background-color: white;
+    width: 100%;
+    padding: 16px 112px;
+    height: 64px;
+}
+
+.headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headerContainer__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerContainer__links {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: black;
+}

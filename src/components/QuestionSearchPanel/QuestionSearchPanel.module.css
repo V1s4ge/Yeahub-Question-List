@@ -1,0 +1,16 @@
+.questionSearchContainter {
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    width: 360px;
+    height: auto;
+    flex-shrink: 0; 
+    background-color: white;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}

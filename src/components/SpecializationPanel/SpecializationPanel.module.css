@@ -1,0 +1,25 @@
+.specializationPanelContainer {
+    display: grid;
+    max-width: 360px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.specializationPanelContainer__header {
+    font-size: 14px;
+    color: rgb(24, 24, 24);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background-color: #d1d1d1;
+    transition: background-color .3s ease-in-out ;
+}
