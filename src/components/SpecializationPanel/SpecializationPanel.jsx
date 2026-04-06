@@ -1,5 +1,5 @@
 import styles from './SpecializationPanel.module.css';
-import SearchButton from '../SearchButton/SearchButton';
+import SearchButton from '../../ui/SearchButton/SearchButton';
 import { memo } from 'react';
 function SpecializationPanel({onShowAllSpecs, showAllSpecs, onChange, options, selectedSpecialization}) {
 
@@ -10,11 +10,8 @@ function SpecializationPanel({onShowAllSpecs, showAllSpecs, onChange, options, s
 		
 		const specId = Number(spec.dataset.btnId);
 		
-		if(selectedSpecialization === specId) {
-			return;
-		} else {
-			onChange({specialization: specId, skills: []});
-		}
+		if(selectedSpecialization === specId) return;
+		onChange({specialization: specId});
 		e.stopPropagation();
 	};
 

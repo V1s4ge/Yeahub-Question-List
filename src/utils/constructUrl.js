@@ -1,4 +1,5 @@
-import BASE_URL from './url';
+import BASE_URL from '../api/url';
+
 
 export function constructUrl(filters, page, limit) {
 	const params = new URLSearchParams({ page, limit });

@@ -1,7 +1,7 @@
 // import { useEffect, useState } from 'react';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import QuestionPage from './components/QuestionPage/QuestionPage';
+import QuestionPage from './pages/QuestionPage/QuestionPage';
 
 function App() {
 

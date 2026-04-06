@@ -1,5 +1,5 @@
 import styles from './Pagination.module.css';
-import getPages from '../../getPages';
+import getPages from '../../utils/getPages';
 import { memo } from 'react';
 
 function Pagination({page, totalPages, onPageChange}) {

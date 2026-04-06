@@ -1,24 +1,14 @@
 import styles from './SkillsPanel.module.css';
-import SearchButton from '../SearchButton/SearchButton';
+import SearchButton from '../../ui/SearchButton/SearchButton';
 import { memo } from 'react'; 
 
 function SkillsPanel({options, selectedSkills,  onChange, showAllSkills, onShowAllSkills}) {
 
 	const handleSkillBtnClick = (e) => {
 		const skill = e.target.closest('[data-btn-id]');
+		if (!skill) return;
 		const skillId = Number(skill.dataset.btnId);
-		
-		let updatedSkills;
-		
-		if(selectedSkills.includes(skillId)) {
-			
-			updatedSkills = selectedSkills.filter(skill => skill !== skillId);
-		} else {
-			updatedSkills = [...selectedSkills, skillId];
-			
-		}
-		
-		onChange({skills: updatedSkills});
+		onChange(skillId);
 		e.stopPropagation();
 	};
 
@@ -28,7 +18,7 @@ function SkillsPanel({options, selectedSkills,  onChange, showAllSkills, onShowA
 				<p className={styles.skillsPanelContainer__header}>Навыки</p>
 				<div className={styles.skillsPanelContainer}>
 					{options && options.map(skill => {
-						return <SearchButton isActive={selectedSkills.includes(skill.id)} img={skill?.image}  key={skill.id} id={skill.id}>  {skill.title} </SearchButton>;
+						return <SearchButton isActive={selectedSkills.includes(skill.id)}   key={skill.id} id={skill.id}>  {skill.title} </SearchButton>;
 					})}
 				</div>
 			</div>

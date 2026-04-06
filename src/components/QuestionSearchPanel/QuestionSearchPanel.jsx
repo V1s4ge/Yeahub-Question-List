@@ -1,46 +1,47 @@
 import styles from './QuestionSearchPanel.module.css';
-import Input from '../Input/Input';
+import Input from '../../ui/Input/Input';
 import SpecializationPanel from '../SpecializationPanel/SpecializationPanel';
 import SkillsPanel from '../SkillsPanel/SkillsPanel';
 import DifficultyPanel from '../DifficultyPanel/DifficultyPanel';
-import difficultyOptions from '../../difficultyOptions';
+import difficultyOptions from '../../utils/difficultyOptions';
 import RaitingPanel from '../RaitingPanel/RaitingPanel';
-import raitingOptions from '../../raitingOprions';
+import raitingOptions from '../../utils/raitingOprions';
 
 
 
-function QuestionSearchPanel({onShowAllSpecs, onShowAllSkills, showAllSpecs, showAllSkills, specializations, skills,  onFiltersChange, filters}) {
+function QuestionSearchPanel({onInputChange, inputValue, onShowAllSpecs, onShowAllSkills, showAllSpecs, showAllSkills, specializations, skills, onSpecChange, onSkillChange, onDifficultyChange, onRaitingChange, filters}) {
 
 
 	return (
 		<div className={styles.questionSearchContainter}>
 
 			<Input 
-				onChange={onFiltersChange}
+				onChange={onInputChange}
+				value={inputValue}
 			/>
 			<SpecializationPanel
 				showAllSpecs = {showAllSpecs}
 				onShowAllSpecs = {onShowAllSpecs}
 				selectedSpecialization={filters.specialization} 
 				options={specializations} 
-				onChange={onFiltersChange}
+				onChange={onSpecChange}
 			/>
 			<SkillsPanel 
 				showAllSkills = {showAllSkills}
 				onShowAllSkills = {onShowAllSkills}
 				selectedSkills={filters.skills}  
 				options={skills}  
-				onChange={onFiltersChange}
+				onChange={onSkillChange}
 			/>
 			<DifficultyPanel 
 				selectedDifficulty={filters.difficulty}
 				options={difficultyOptions} 
-				onChange={onFiltersChange}
+				onChange={onDifficultyChange}
 			/>
 
 			<RaitingPanel 
 				selectedRate={filters.rate}
-				onChange={onFiltersChange}
+				onChange={onRaitingChange}
 				options={raitingOptions}
 			/>
 

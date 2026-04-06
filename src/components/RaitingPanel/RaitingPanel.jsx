@@ -1,24 +1,14 @@
-import SearchButton from '../SearchButton/SearchButton';
+import SearchButton from '../../ui/SearchButton/SearchButton';
 import styles from './RaitingPanel.module.css';
 
 function RaitingPanel({options, selectedRate, onChange}) {
 
 	const handleRateBtnClick = (e) => {
 
-		const rate = e.target.closest('[data-btn-id]');
-
-		if(!rate) return;
-
-		const rateId = Number(rate.dataset.btnId);
-		
-		let updatedRaitings;
-		let findRateValue = options.find(r => r.id === rateId);
-	
-		const rateValue = findRateValue.value;
-		
-		updatedRaitings = selectedRate.includes(rateValue) ? selectedRate.filter(r => r !== rateValue) : [...selectedRate, rateValue];
-		
-		onChange({rate: [...updatedRaitings]});
+		const btn = e.target.closest('[data-btn-id]');
+		if (!btn) return;
+		const id = Number(btn.dataset.btnId);
+		onChange(id);
 		e.stopPropagation();
 	};
 
