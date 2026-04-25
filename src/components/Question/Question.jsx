@@ -2,6 +2,7 @@ import styles from'./Question.module.css';
 import QuestionRaiting from '../QuestionRaiting/QuestionRaiting';
 import QuestionDifficulty from '../QuestionDifficulty/QuestionDifficulty';
 import QuestionShortAnswer from '../QuestionShortAnswer/QuestionShortAnswer';
+import { Link } from 'react-router-dom';
 
 function Question({title, id, shortAnswer, complexity, rate, isOpen}) {
 	
@@ -22,7 +23,9 @@ function Question({title, id, shortAnswer, complexity, rate, isOpen}) {
 						<QuestionDifficulty complexity={complexity}/>
 					</div>
 					<QuestionShortAnswer shortAnswer={shortAnswer}/>
+					<Link to={`/question/${id}`}> Подробнее </Link>
 				</div>
+				
 			)}
 		</div>
 		
