@@ -1,14 +1,14 @@
 .questionContainer {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-    overflow: hidden;
+  background-color: var(--color-bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .questionContainer:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .questionHeader {
@@ -19,17 +19,26 @@
   cursor: pointer;
 }
 
+.questionContainer__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}
+
 .bullet {
   width: 8px;
   height: 8px;
-  background-color: #7c3aed; 
+  background-color: var(--color-primary); 
   border-radius: 50%;
   flex-shrink: 0; 
 }
 
 .questionContainer__title {
-    line-height: 24px;
+    flex: 1;
     font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
 }
 
 .arrowButton {
@@ -41,6 +50,7 @@
     display: flex; 
     align-items: center;
     justify-content: center;
+    margin-left: auto;
 }
 
 .arrowButton.open {
@@ -50,19 +60,23 @@
 .questionStats {
 	display: flex;
 	gap: 40px;
-    padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .questionInfo {
     max-height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height .8s ease-in-out, background-color .3s ease-in-out;
-    padding: 24px;
+    transition: max-height 0.8s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 0 24px;
 }
 
 .questionInfo.open {
     max-height: 700px;
     opacity: 1;
     padding: 24px;
+}
+
+.detailedQuestionLink {
+  margin-left: auto;
 }

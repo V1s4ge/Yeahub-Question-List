@@ -9,7 +9,7 @@ function DifficultyPanel({ options,  selectedDifficulty, onChange}) {
 		const difficultyId = Number(e.target.dataset.btnId);
 		if(!difficultyId) return;
 		
-		onChange({difficulty: difficultyId});
+		onChange(difficultyId);
 		e.stopPropagation();
 	};
 

@@ -1,21 +1,18 @@
 .detailedQuestionPageContainer {
-    display: flex;
-    justify-content: center;
-    padding: 0 112px;
-    gap: 20px; 
-    box-sizing: border-box;
-    margin-top: 40px;
-    align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  padding: var(--padding-page);
+  gap: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  align-items: flex-start;
 }
+
+
 
 @media (max-width: 1440px) {
-    .detailedQuestionPageContainer {
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 23px;
+  .detailedQuestionPageContainer {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 }

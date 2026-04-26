@@ -1,7 +1,8 @@
 .skillsPanelContainer__header {
     font-size: 14px;
-    color: rgb(24, 24, 24);
+    color: var(--color-text-primary);
     font-weight: 300;
+    margin-bottom: 8px;
 }
 
 .skillsPanelContainer {

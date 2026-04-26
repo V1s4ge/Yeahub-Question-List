@@ -22,7 +22,7 @@ function QuestionSearchPanel({onInputChange, inputValue, onShowAllSpecs, onShowA
 			<SpecializationPanel
 				showAllSpecs = {showAllSpecs}
 				onShowAllSpecs = {onShowAllSpecs}
-				selectedSpecialization={filters.specialization} 
+				selectedSpecialization={filters.specId} 
 				options={specializations} 
 				onChange={onSpecChange}
 			/>

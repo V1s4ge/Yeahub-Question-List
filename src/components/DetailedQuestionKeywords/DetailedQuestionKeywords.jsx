@@ -5,7 +5,7 @@ function DetailedQuestionKeywords({keywords}) {
 		<div className={styles.keywordsContainer}>
 			<p className={styles.keywordsTitle}>Ключевые слова</p>
 			<div className={styles.keywords}>
-				{keywords.map(key => <a href='/'>#{key}</a>)}
+				{keywords.map(key => <span key={key} className={styles.keyword}>#{key}</span>)}
                 
 			</div>
 		</div>

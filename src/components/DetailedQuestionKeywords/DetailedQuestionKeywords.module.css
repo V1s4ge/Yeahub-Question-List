@@ -1,8 +1,18 @@
-.keywords {
-    display: flex;
-    gap: 10px;
+.keywordsTitle {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  font-weight: 400;
+  margin-bottom: 8px;
 }
 
-a {
-    color: #6a0bff;
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.keyword {
+  color: var(--color-primary);
+  font-size: 16px;
+  cursor: pointer;
 }

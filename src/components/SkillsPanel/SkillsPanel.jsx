@@ -25,7 +25,7 @@ function SkillsPanel({options, selectedSkills,  onChange=null, showAllSkills, on
 					})}
 				</div>
 			</div>
-			{options.length > 5 ? <SearchButton  onClick={onShowAllSkills}> {showAllSkills ? 'Скрыть' : 'Посмотреть все'}</SearchButton> : ''}
+			 {onShowAllSkills ? <SearchButton  onClick={onShowAllSkills}> {showAllSkills ? 'Скрыть' : 'Посмотреть все'}</SearchButton> : ''}
 		</>
 		
 	);

@@ -6,13 +6,26 @@
     width: 360px;
     height: auto;
     flex-shrink: 0; 
-    background-color: white;
-    border-radius: 16px;
+    background-color: var(--color-bg-card);
+    border-radius: var(--radius-xl);
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 20px;
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: auto;
+    padding: var(--padding-card);
 
 }
+
+.detailedQuestionLevelHeader {
+    font-size: 14px;
+    color: var(--color-text-primary);
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.detailedQuestionLevel {
+    display: flex;
+	gap: 40px;
+    padding-bottom: 20px;
+}
+
+ 

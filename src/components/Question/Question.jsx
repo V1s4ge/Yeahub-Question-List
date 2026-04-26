@@ -23,7 +23,7 @@ function Question({title, id, shortAnswer, complexity, rate, isOpen}) {
 						<QuestionDifficulty complexity={complexity}/>
 					</div>
 					<QuestionShortAnswer shortAnswer={shortAnswer}/>
-					<Link to={`/question/${id}`}> Подробнее </Link>
+					<Link className={styles.detailedQuestionLink}  to={`/question/${id}`}> Подробнее </Link>
 				</div>
 				
 			)}

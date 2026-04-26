@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Question from '../Question/Question';
 import styles from'./QuestionsList.module.css';
 import Pagination from '../../ui/Pagination/Pagination';
+import LoadingPage from '../../ui/LoadingPage/LoadingPage';
+import ErrorPage from '../../pages/ErrorPage/ErrorPage';
 
 
 function QuestionsList({questions, page, totalPages, onPageChange, specialization, isLoading, error}) {
@@ -24,8 +26,8 @@ function QuestionsList({questions, page, totalPages, onPageChange, specializatio
 		<div onClick={handleQuestionClick} className={styles.questionListContainer}>
 			<h1>Вопросы по {specialization?.title ?? ''}</h1>
 
-			{isLoading && <p>Загрузка</p>}
-			{error && <p>{}error</p>}
+			{isLoading && <LoadingPage />}
+			{error && <ErrorPage />}
 
 			{!isLoading && !error && (
 				<>

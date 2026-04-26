@@ -10,6 +10,7 @@ function DetailedQuestionSideBar({questionsInfo}) {
     
 	return (
 		<div className={styles.detailedQuestionSideBarContainer}>
+			<p className={styles.detailedQuestionLevelHeader}>Уровень</p>
 			<div className={styles.detailedQuestionLevel}>
 				<QuestionDifficulty complexity={question.complexity}/>
 				<QuestionRaiting rate={question.rate} />
